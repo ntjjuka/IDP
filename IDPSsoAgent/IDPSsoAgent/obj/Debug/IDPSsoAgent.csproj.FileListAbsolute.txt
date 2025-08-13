@@ -1,0 +1,10 @@
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\bin\Debug\icon.ico
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\bin\Debug\IDPSsoAgent.exe.config
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\bin\Debug\IDPSsoAgent.exe
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\bin\Debug\IDPSsoAgent.pdb
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.Properties.Resources.resources
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.csproj.GenerateResource.cache
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.exe
+D:\work\IDP_new\IDPSsoAgent\IDPSsoAgent\obj\Debug\IDPSsoAgent.pdb

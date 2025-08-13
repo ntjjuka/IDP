@@ -1,0 +1,52 @@
+﻿
+트랜잭트 설치를 실행하고 있습니다.
+
+설치의 Install 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Install 단계를 진행하는 동안 예외가 발생했습니다.
+System.Security.SecurityException: 소스를 찾을 수 없습니다. 일부 또는 전체 이벤트 로그를 검색하지 못했습니다. 액세스할 수 없는 로그: Security.
+
+설치의 Rollback 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Rollback 단계가 완료되었습니다.
+
+트랜잭트 설치가 완료되었습니다.
+
+트랜잭트 설치를 실행하고 있습니다.
+
+설치의 Install 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Install 단계는 완료되었으며 Commit 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Commit 단계가 완료되었습니다.
+
+트랜잭트 설치가 완료되었습니다.
+
+
+제거를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+트랜잭트 설치를 실행하고 있습니다.
+
+설치의 Install 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Install 단계는 완료되었으며 Commit 단계를 시작하고 있습니다.
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe 어셈블리의 진행 상황을 보려면 로그 파일 내용을 검토하십시오.
+파일은 D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.InstallLog 위치에 있습니다.
+
+Commit 단계가 완료되었습니다.
+
+트랜잭트 설치가 완료되었습니다.
+
+제거가 완료되었습니다.

@@ -1,0 +1,36 @@
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe.config
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.pdb
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.csproj.AssemblyReference.cache
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.csproj.CoreCompileInputs.cache
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.exe
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.pdb
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.env
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\idp-args.ini
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.dll
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Primitives.dll
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Sprache.dll
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.xml
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Primitives.xml
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Sprache.xml
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS I.52CA29FE.Up2Date
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.env
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\idp-args.ini
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe.config
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.exe
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\S1 BMS IDPServiceManager.pdb
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Primitives.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\Microsoft.Extensions.Primitives.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS I.52CA29FE.Up2Date
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.exe
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Release\S1 BMS IDPServiceManager.pdb

@@ -1,0 +1,22 @@
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\S1 BMS IDPServiceManager.exe.config
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\S1 BMS IDPServiceManager.exe
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\S1 BMS IDPServiceManager.pdb
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.csproj.AssemblyReference.cache
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.csproj.CoreCompileInputs.cache
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.exe
+C:\Users\ntjju\source\repos\S1 BMS IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.pdb
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\.env
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\idp-args.ini
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\S1 BMS IDPServiceManager.exe
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\S1 BMS IDPServiceManager.pdb
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS I.52CA29FE.Up2Date
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.exe
+D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\obj\Debug\S1 BMS IDPServiceManager.pdb

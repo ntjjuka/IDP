@@ -1,0 +1,128 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient_webview.csproj|d:\\work\\idp_new\\keycloakoidcclient_webview\\keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient_webview.csproj|solutionrelative:keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient_webview.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_webview\\keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient_webview.csproj|solutionrelative:keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_webview\\keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|solutionrelative:keycloakoidcclient\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_webview\\keycloakoidcclient\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|solutionrelative:keycloakoidcclient\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_webview\\keycloakoidcclient\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|solutionrelative:keycloakoidcclient\\mainform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_webview\\keycloakoidcclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D02A8B7-1012-433E-859E-F7A4BDD9D18B}|KeycloakOidcClient\\KeycloakOidcClient.csproj|solutionrelative:keycloakoidcclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|KeycloakOidcClient_webview||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\MainForm.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "KeycloakOidcClient\\MainForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-30T08:25:48.517Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "KeycloakOidcClient_webview",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\KeycloakOidcClient_webview.csproj",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\KeycloakOidcClient_webview.csproj",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\KeycloakOidcClient_webview.csproj",
+              "RelativeToolTip": "KeycloakOidcClient\\KeycloakOidcClient_webview.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-30T08:15:45.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\MainForm.Designer.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.Designer.cs",
+              "RelativeToolTip": "KeycloakOidcClient\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T07:36:46.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\Program.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\Program.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\Program.cs",
+              "RelativeToolTip": "KeycloakOidcClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T06:51:03.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainForm.resx",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.resx",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\MainForm.resx",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.resx",
+              "RelativeToolTip": "KeycloakOidcClient\\MainForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-07-29T06:50:56.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\MainForm.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.cs",
+              "RelativeToolTip": "KeycloakOidcClient\\MainForm.cs",
+              "ViewState": "AgIAAHgBAAAAAAAAAAAYwKYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T06:47:45.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_webview\\KeycloakOidcClient\\MainForm.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ntjju\\source\\repos\\KeycloakOidcClient\\KeycloakOidcClient\\MainForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T06:44:20.286Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

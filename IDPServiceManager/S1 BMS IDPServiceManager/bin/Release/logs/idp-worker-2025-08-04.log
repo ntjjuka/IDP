@@ -1,0 +1,17 @@
+[2025-08-04 14:43:31] 서비스 시작됨.
+[2025-08-04 14:43:31] Keycloak 실행 시작...
+[2025-08-04 14:43:31] javaExe: C:\Users\ntjju\scoop\apps\openjdk21\current\bin\java.exe
+[2025-08-04 14:43:31] jarPath: D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.\keycloak\lib\quarkus-run.jar
+[2025-08-04 14:43:31] javaOpts: -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.err.encoding=UTF-8 -XX:+ExitOnOutOfMemoryError -Djava.security.egd=file:/dev/urandom -XX:+UseG1GC -Xms64m -Xmx512m --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED -Duser.language=en -Duser.country=US -Dprogram.name=kc.bat -Dkc.home.dir="D:/work/IDP_new/IDPServiceManager/S1 BMS IDPServiceManager/bin/Release/./keycloak" -Djboss.server.config.dir="D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.\keycloak\conf" -Dblocked-ips-file="D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.\keycloak\conf\blocked-ips.conf" -Dkeycloak.theme.dir="D:\work\IDP_new\IDPServiceManager\S1 BMS IDPServiceManager\bin\Release\.\keycloak\themes" -Djava.util.concurrent.ForkJoinPool.common.threadFactory=io.quarkus.bootstrap.forkjoin.QuarkusForkJoinWorkerThreadFactory
+[2025-08-04 14:43:31] startCommand: start-dev
+[2025-08-04 14:43:31] otherArgs: --http-port=5500 --health-enabled=true --metrics-enabled=true --log-console-level=info --features=preview --import-realm
+[2025-08-04 14:43:31] Keycloak 프로세스가 실행되었습니다.
+[2025-08-04 14:43:33] Running the server in development mode. DO NOT use this configuration in production.
+[2025-08-04 14:43:39] 2025-08-04 14:43:33,799 INFO  [org.keycloak.common.Profile] (main) Preview features enabled: client-secret-rotation:v1, dpop:v1, log-mdc:v1, passkeys:v1, scripts:v1, token-exchange:v1
+[2025-08-04 14:43:46] 2025-08-04 14:43:46,707 INFO  [org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator] (main) JGroups JDBC_PING discovery enabled.
+[2025-08-04 14:43:49] 2025-08-04 14:43:49,352 INFO  [org.infinispan.CONTAINER] (main) ISPN000556: Starting user marshaller 'org.infinispan.commons.marshall.ImmutableProtoStreamMarshaller'
+[2025-08-04 14:43:49] 2025-08-04 14:43:49,772 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: node_94275, Site name: null
+[2025-08-04 14:43:50] 2025-08-04 14:43:50,993 INFO  [io.quarkus] (main) Keycloak 999.0.0-SNAPSHOT on JVM (powered by Quarkus 3.24.3) started in 18.269s. Listening on: http://0.0.0.0:5500
+[2025-08-04 14:43:50] 2025-08-04 14:43:50,994 INFO  [io.quarkus] (main) Profile dev activated. 
+[2025-08-04 14:43:50] 2025-08-04 14:43:50,994 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, keycloak, narayana-jta, opentelemetry, reactive-routes, rest, rest-jackson, smallrye-context-propagation, vertx]
+[2025-08-04 15:14:32] 2025-08-04 15:14:32,170 INFO  [com.arjuna.ats.jbossatx] (Shutdown thread) ARJUNA032014: Stopping transaction recovery manager

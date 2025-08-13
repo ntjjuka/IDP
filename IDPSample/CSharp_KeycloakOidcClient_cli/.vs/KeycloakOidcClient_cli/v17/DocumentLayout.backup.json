@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|d:\\work\\idp_new\\keycloakoidcclient_cli\\keycloakoidcclient_cli\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|solutionrelative:keycloakoidcclient_cli\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_cli\\keycloakoidcclient_cli\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|solutionrelative:keycloakoidcclient_cli\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_cli\\keycloakoidcclient_cli\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|solutionrelative:keycloakoidcclient_cli\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|D:\\work\\IDP_new\\KeycloakOidcClient_cli\\keycloakoidcclient_cli\\main.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{45A83BA5-8D43-4CE8-8B7F-9D5A2A6D647A}|KeycloakOidcClient_cli\\KeycloakOidcClient_cli.csproj|solutionrelative:keycloakoidcclient_cli\\main.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient_cli\\Main.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.cs",
+              "RelativeToolTip": "KeycloakOidcClient_cli\\Main.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwIYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T04:18:03.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.resx",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.resx",
+              "RelativeDocumentMoniker": "KeycloakOidcClient_cli\\Main.resx",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.resx",
+              "RelativeToolTip": "KeycloakOidcClient_cli\\Main.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-07-31T04:17:28.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.Designer.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.Designer.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient_cli\\Main.Designer.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.Designer.cs",
+              "RelativeToolTip": "KeycloakOidcClient_cli\\Main.Designer.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAMwGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T04:17:07.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.cs",
+              "RelativeDocumentMoniker": "KeycloakOidcClient_cli\\Main.cs",
+              "ToolTip": "D:\\work\\IDP_new\\KeycloakOidcClient_cli\\KeycloakOidcClient_cli\\Main.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "KeycloakOidcClient_cli\\Main.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-31T03:57:33.207Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
