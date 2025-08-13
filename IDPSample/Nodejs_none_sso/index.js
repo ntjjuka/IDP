@@ -8,12 +8,21 @@ const userRoute = require('./routes/user');
 const app = express();
 const port = 5002;
 
+// IMPORTANT: Your REDIRECT_URI must use the SAME host you visit this app with (e.g.,
+// http://localhost:5002/oidc/callback). Avoid mixing 127.0.0.1 vs localhost vs IP/hostname,
+// otherwise the session cookie won't be sent back and PKCE verifier will be missing.
+
 app.use(express.json()); // ✅ JSON body 파싱용
 app.use(express.urlencoded({ extended: true }));
+app.set('trust proxy', 1); // if behind proxy/https, keeps cookies working
 app.use(session({
   secret: 'my-secret-key',
   resave: false,
-  saveUninitialized: true,
+  saveUninitialized: false, // don't create empty sessions
+  cookie: {
+    sameSite: 'lax',
+    secure: false // set true only when serving this app over HTTPS
+  }
 }));
 //SSO 미들웨어
 app.use((req, res, next) => {
@@ -71,35 +80,80 @@ initOIDC();
 
 // 로그인 요청
 app.get('/oidc/login', (req, res) => {
-  codeVerifier = generators.codeVerifier();
+  const codeVerifier  = generators.codeVerifier();
   const codeChallenge = generators.codeChallenge(codeVerifier);
 
+  req.session.loginMode = (req.query.mode === 'popup') ? 'popup' : 'redirect';
   req.session.codeVerifier = codeVerifier;
 
   const authUrl = client.authorizationUrl({
     scope: 'openid profile email',
     code_challenge: codeChallenge,
-    code_challenge_method: 'S256',
+    code_challenge_method: 'S256'
   });
 
-  res.redirect(authUrl);
+  return res.redirect(authUrl);
 });
-
-// 콜백 처리
+// ====== 콜백(팝업/일반 병합 + userinfo 조회) ======
 app.get('/oidc/callback', async (req, res) => {
+  try {
     const params = client.callbackParams(req);
     const tokenSet = await client.callback(
-        process.env.REDIRECT_URI,
-        params,
-        { code_verifier: req.session.codeVerifier }
+      process.env.REDIRECT_URI,
+      params,
+      { code_verifier: req.session.codeVerifier }
     );
 
-    req.session.tokenSet = tokenSet;
-    req.session.claims = tokenSet.claims();
+    // 표준 클레임
+    const claims = tokenSet.claims();
 
-    console.log('✅ 로그인 완료:', req.session.claims);
-    console.log('✅ tokenSet:', req.session.tokenSet);
-    res.redirect('/oidc/home');
+    // 🔎 userinfo 엔드포인트로 상세 프로필 조회 (access_token 필요)
+    let userinfo = {};
+    try {
+      userinfo = await client.userinfo(tokenSet);
+    } catch (e) {
+      console.warn('userinfo 호출 실패(무시 가능):', e.message);
+    }
+
+    // 세션 저장
+    req.session.tokenSet = {
+      access_token: tokenSet.access_token,
+      id_token: tokenSet.id_token,
+      expires_at: tokenSet.expires_at,
+      scope: tokenSet.scope
+      // refresh_token은 필요 시 저장 (보안 유의)
+      // refresh_token: tokenSet.refresh_token,
+    };
+    req.session.claims = claims;
+    req.session.userinfo = userinfo;
+
+    const mode = req.session.loginMode || 'redirect';
+
+    
+    if (mode === 'popup') {
+      // ✅ 세션 저장 완료를 보장한 뒤 postMessage
+      req.session.save(() => {
+        res.type('html').send(`<!doctype html>
+          <meta charset="utf-8">
+          <script>
+            (function() {
+              try {
+                if (window.opener) {
+                  window.opener.postMessage({ type: 'oidc:done' }, '${ORIGIN}');
+                }
+              } catch (e) {}
+              window.close();
+            })();
+          </script>
+          로그인 성공. 창을 닫습니다.`);
+      });
+    } else {
+      res.redirect('/oidc/home');
+    }
+  } catch (err) {
+    console.error('❌ 콜백 오류:', err);
+    res.status(400).send('Callback error');
+  }
 });
 
 // 로그아웃 처리
@@ -125,6 +179,42 @@ app.get('/oidc/home', (req, res) => {
       
       <a href="/oidc/profile">프로필</a>
       <a href="/oidc/logout">로그아웃</a>
+      <button id="agentBtn" type="button">agent 호출(로컬)</button>
+      <pre id="agentResult" style="background:#f7f7f7;padding:8px;border:1px solid #ddd;white-space:pre-wrap;"></pre>
+      <script>
+        (function(){
+          const origin='${ORIGIN}';
+          const out = document.getElementById('agentResult');
+          document.getElementById('agentBtn').addEventListener('click', async () => {
+            out.textContent = '요청 중...';
+            try {
+              // 1) 서버에서 1회용 챌린지 획득 (서버는 비밀키를 노출하지 않음)
+              const ch = await fetch('/api/agent/challenge', { cache: 'no-store', headers: { 'X-Requested-With': 'fetch' } })
+                .then(r => r.ok ? r.json() : Promise.reject(new Error('challenge failed')));
+              // 2) 브라우저가 로컬 에이전트를 직접 호출 (127.0.0.1)
+              const r = await fetch('http://127.0.0.1:5400/status', {
+                method: 'GET',
+                headers: {
+                  // 에이전트는 정적 키 대신 아래 1회용 서명/논스를 검증하도록 구현되어야 함
+                  'X-SSO-Agent-Key': '${process.env.SSO_AGENT_KEY}',
+                  'X-SSO-Nonce': ch.nonce,
+                  'X-SSO-Signature': ch.signature,
+                  'X-SSO-Origin': origin
+                }
+              });
+              const text = await r.text();
+              try {
+                const j = JSON.parse(text);
+                out.textContent = JSON.stringify(j, null, 2);
+              } catch {
+                out.textContent = text;
+              }
+            } catch (e) {
+              out.textContent = '에러: ' + (e && e.message ? e.message : e);
+            }
+          });
+        })();
+      </script>
     `);
   } else {
     res.send(`

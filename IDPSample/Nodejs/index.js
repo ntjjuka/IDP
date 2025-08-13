@@ -9,6 +9,7 @@ const session = require('express-session');
 const { Issuer, generators } = require('openid-client');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
+const crypto = require('crypto');
 
 // (선택) 외부 라우트
 // const signupRoute = require('./routes/signup');
@@ -179,7 +180,36 @@ app.get('/oidc/home', (req, res) => {
         <li><b>sub:</b> ${claims.sub}</li>
       </ul>
       <a href="/oidc/profile">프로필 상세</a> |
-      <a href="/oidc/logout">로그아웃</a>
+      <a href="/oidc/logout">로그아웃</a> |
+      <button id="agentBtn" type="button">agent 호출(로컬)</button>
+      <pre id="agentResult" style="background:#f7f7f7;padding:8px;border:1px solid #ddd;white-space:pre-wrap;"></pre>
+      <script>
+        (function(){
+          const origin='${ORIGIN}';
+          const out = document.getElementById('agentResult');
+          document.getElementById('agentBtn').addEventListener('click', async () => {
+            out.textContent = '요청 중...';
+            try {
+              const r = await fetch('http://127.0.0.1:5400/status', {
+                method: 'GET',
+                headers: {
+                  // 에이전트는 정적 키 대신 아래 1회용 서명/논스를 검증하도록 구현되어야 함
+                  'X-SSO-Agent-Key': 'change-me-very-secret',
+                }
+              });
+              const text = await r.text();
+              try {
+                const j = JSON.parse(text);
+                out.textContent = JSON.stringify(j, null, 2);
+              } catch {
+                out.textContent = text;
+              }
+            } catch (e) {
+              out.textContent = '에러: ' + (e && e.message ? e.message : e);
+            }
+          });
+        })();
+      </script>
     `);
   } else {
     res.send(`
@@ -235,6 +265,55 @@ app.get('/api/me', (req, res) => {
     userinfo: req.session.userinfo || null,
     tokenSet: req.session.tokenSet || null   // 필요 시 토큰 제거/마스킹
   });
+});
+
+// ====== 에이전트 챌린지 발급 (브라우저→로컬 에이전트 호출용) ======
+app.get('/api/agent/challenge', (req, res) => {
+  if (!req.session?.claims) return res.status(401).json({ ok: false, error: 'unauthenticated' });
+  const AGENT_KEY = process.env.SSO_AGENT_KEY || '';
+  if (!AGENT_KEY) return res.status(500).json({ ok: false, error: 'server-misconfigured' });
+
+  const nonce = crypto.randomBytes(16).toString('hex');
+  const exp = Math.floor(Date.now() / 1000) + 30; // 30초 유효
+  const payload = `${nonce}|${req.session.claims.sub}|${exp}`;
+  const signature = crypto.createHmac('sha256', AGENT_KEY).update(payload).digest('hex');
+
+  res.json({ ok: true, nonce, signature, exp, origin: ORIGIN, sub: req.session.claims.sub });
+});
+
+const AGENT_KEY = process.env.SSO_AGENT_KEY;
+
+// ====== 로컬 Agent 프록시 ======
+app.get('/api/agent/status', (req, res) => {
+  const options = {
+    hostname: '127.0.0.1',
+    port: 5400,
+    path: '/status',
+    method: 'GET',
+    timeout: 3000,
+    headers: {
+      'X-SSO-Agent-Key': AGENT_KEY,
+      'Accept': 'application/json'
+    }
+  };
+
+  const agentReq = http.request(options, (agentRes) => {
+    let body = '';
+    agentRes.on('data', (chunk) => (body += chunk));
+    agentRes.on('end', () => {
+      let data = body;
+      try { data = JSON.parse(body); } catch {}
+      res.status(agentRes.statusCode || 200).json({
+        ok: agentRes.statusCode >= 200 && agentRes.statusCode < 300,
+        statusCode: agentRes.statusCode,
+        data
+      });
+    });
+  });
+
+  agentReq.on('timeout', () => agentReq.destroy(new Error('timeout')));
+  agentReq.on('error', (err) => res.status(502).json({ ok:false, error: err.message }));
+  agentReq.end();
 });
 
 // ====== 백채널 로그아웃 ======
