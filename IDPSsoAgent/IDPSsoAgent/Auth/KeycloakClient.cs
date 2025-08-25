@@ -2,6 +2,7 @@
 using IDPSsoAgent.Core;
 using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -80,6 +81,11 @@ namespace IDPSsoAgent.Auth
         // ROPC 로그인 (username/password)
         public System.Threading.Tasks.Task<ApiResult<TokenResponse>> LoginWithPasswordAsync(string username, string password, string scope)
         {
+            if (string.IsNullOrWhiteSpace(scope)) scope = "openid";
+            else if (!scope.Split(' ').Any(s => s.Equals("openid", StringComparison.OrdinalIgnoreCase)))
+                scope = scope + " openid";
+
+
             return PostTokenForm(new StringBuilder()
                 .Append("grant_type=password")
                 .Append("&client_id=").Append(Uri.EscapeDataString(AppConfig.ClientId))
@@ -192,7 +198,7 @@ namespace IDPSsoAgent.Auth
                     using (var sr = new StreamReader(rs, Encoding.UTF8))
                     {
                         var json = sr.ReadToEnd();
-                        var obj = _json.Deserialize<object>(json); // { active: true/false, ... }
+                        var obj = _json.Deserialize<object>(json);
                         return ApiResult<object>.Ok(obj);
                     }
                 }

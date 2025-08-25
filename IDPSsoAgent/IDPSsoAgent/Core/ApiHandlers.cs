@@ -10,38 +10,60 @@ namespace IDPSsoAgent.Core
     {
         private readonly KeycloakClient _kc = new KeycloakClient();
         private readonly KeycloakAdminClient _admin = new KeycloakAdminClient();
+        private static readonly System.Threading.SemaphoreSlim _refreshLock = new System.Threading.SemaphoreSlim(1, 1);
 
         //1)  토큰 만료 전이면 그대로, 만료면 refresh 시도
-        private async Task<bool> EnsureFreshTokenAsync()
+        public async Task<bool> EnsureFreshTokenAsync()
         {
             // 로그인 안 되어 있음
             if (!TokenMemoryStore.IsLoggedIn) return false;
 
-            // 아직 유효
-            if (TokenMemoryStore.ExpiresAt.HasValue && TokenMemoryStore.ExpiresAt.Value > DateTimeOffset.UtcNow.AddSeconds(5))
+            // 아직 유효(30초 여유)
+            if (TokenMemoryStore.ExpiresAt.HasValue && TokenMemoryStore.ExpiresAt.Value > DateTimeOffset.UtcNow.AddSeconds(30))
                 return true;
+            
+            // 리프레시 자체가 만료되었는지 먼저 확인
+            if (TokenMemoryStore.RefreshExpiresAt.HasValue &&
+                TokenMemoryStore.RefreshExpiresAt.Value <= DateTimeOffset.UtcNow)
+                return false;
 
             // refresh 시도
             var rt = TokenMemoryStore.RefreshToken;
             if (string.IsNullOrEmpty(rt)) return false;
 
-            var res = await _kc.RefreshAsync(rt);
-            if (!res.ok) return false;
 
-            TokenMemoryStore.SaveTokens(
-                res.data.access_token,
-                res.data.refresh_token,
-                res.data.id_token,
-                res.data.expires_in);
-
-            //토큰 자동 갱신 알림
-            await EventBus.BroadcastAsync("token_refresh", new
+            // 동시 갱신 방지
+            await _refreshLock.WaitAsync();
+            try
             {
-                loggedIn = true,
-                expiresAtUnix = TokenMemoryStore.ExpiresAt.HasValue ? TokenMemoryStore.ExpiresAt.Value.ToUnixTimeSeconds() : (long?)null
-            });
+                // 다른 쓰레드가 먼저 갱신했을 수 있으니 재확인
+                if (TokenMemoryStore.ExpiresAt.HasValue &&
+                    TokenMemoryStore.ExpiresAt.Value > DateTimeOffset.UtcNow.AddSeconds(30))
+                    return true;
 
-            return true;
+                var res = await _kc.RefreshAsync(rt);
+                if (!res.ok) return false;
+
+                TokenMemoryStore.SaveTokens(
+                    res.data.access_token,
+                    string.IsNullOrEmpty(res.data.refresh_token) ? TokenMemoryStore.RefreshToken : res.data.refresh_token,
+                    res.data.id_token,
+                    res.data.expires_in,
+                    res.data.refresh_expires_in
+                );
+
+                await EventBus.BroadcastAsync("token_refresh", new
+                {
+                    loggedIn = true,
+                    expiresAtUnix = TokenMemoryStore.ExpiresAt?.ToUnixTimeSeconds()
+                });
+
+                return true;
+            }
+            finally
+            {
+                _refreshLock.Release();
+            }
         }
 
         //2) 로그인
@@ -81,7 +103,8 @@ namespace IDPSsoAgent.Core
                 result.data.access_token,
                 result.data.refresh_token,
                 result.data.id_token,
-                result.data.expires_in);
+                result.data.expires_in,
+                result.data.refresh_expires_in);
 
             // 4) 로그인 완료 브로드캐스트
             await EventBus.BroadcastAsync("session_login", new

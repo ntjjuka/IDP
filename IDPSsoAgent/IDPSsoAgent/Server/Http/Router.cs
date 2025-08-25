@@ -87,7 +87,6 @@ namespace IDPSsoAgent.Server.Http
             }
             else if (method == "GET" && path == "/introspect")
             {
-                // ?token=... (옵션) 없으면 현재 세션 토큰 검사
                 var token = ctx.Request.QueryString["token"];
                 var res = await _api.IntrospectAsync(token);
                 await json(ctx, res);

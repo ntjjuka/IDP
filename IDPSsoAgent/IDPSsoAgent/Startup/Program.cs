@@ -131,10 +131,17 @@ namespace IDPSsoAgent.Startup
                 // 6) 정상 실행
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.ApplicationExit += (s, e) => { SingleInstance.Release(); };
-                SessionPoller.Start();
+                // ★ 폴링 시작
+                IDPSsoAgent.Core.SessionPoller.Start();
+
+                // 종료 시 정리
+                Application.ApplicationExit += (s, e) =>
+                {
+                    IDPSsoAgent.Core.SessionPoller.Stop();
+                    SingleInstance.Release();
+                };
+
                 Application.Run(new MainForm());
-                SessionPoller.Stop();
             }
             catch (Exception ex)
             {

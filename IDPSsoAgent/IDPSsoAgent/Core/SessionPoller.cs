@@ -63,14 +63,19 @@ namespace IDPSsoAgent.Core
             _apiHandlers = apiHandlers;
         }
 
-        // ... (생략) ...
-
         private static async Task TickAsync()
         {
             if (_running) return;
             _running = true;
             try
             {
+                var refreshedOrValid = await _apiHandlers.EnsureFreshTokenAsync();
+                if (!refreshedOrValid)
+                {
+                    await _apiHandlers.LogoutAsync();
+                    return;
+                }
+
                 if (!TokenMemoryStore.IsLoggedIn) { ResetBackoffIfNeeded(); return; }
 
                 if (JitterMaxMs > 0)
@@ -132,9 +137,9 @@ namespace IDPSsoAgent.Core
 
                     var form = new StringBuilder();
                     form.Append("token=").Append(Uri.EscapeDataString(access))
-                        .Append("&client_id=").Append(Uri.EscapeDataString(AppConfig.ClientId));
-                    if (!string.IsNullOrEmpty(AppConfig.ClientSecret))
-                        form.Append("&client_secret=").Append(Uri.EscapeDataString(AppConfig.ClientSecret));
+                        .Append("&client_id=").Append(Uri.EscapeDataString(AppConfig.AdminClientId));
+                    if (!string.IsNullOrEmpty(AppConfig.AdminClientId))
+                        form.Append("&client_secret=").Append(Uri.EscapeDataString(AppConfig.AdminClientSecret));
 
                     var bytes = Encoding.UTF8.GetBytes(form.ToString());
                     using (var os = req.GetRequestStream()) os.Write(bytes, 0, bytes.Length);
@@ -143,7 +148,6 @@ namespace IDPSsoAgent.Core
                     using (var sr = new StreamReader(resp.GetResponseStream()))
                     {
                         var json = sr.ReadToEnd();
-                        // { "active": true/false, ... }
                         var dict = _json.Deserialize<Dictionary<string, object>>(json);
                         return dict != null &&
                                dict.TryGetValue("active", out var v) &&

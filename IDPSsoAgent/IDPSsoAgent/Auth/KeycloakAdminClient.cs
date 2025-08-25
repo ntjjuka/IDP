@@ -105,7 +105,7 @@ namespace IDPSsoAgent.Auth
 
                     using (var resp = (HttpWebResponse)req.GetResponse())
                     {
-                        // Keycloak 보통: 201 Created + Location: .../users/{id}
+                        // Keycloak 보통: 201 Created + Location: /users/{id}
                         if ((int)resp.StatusCode == 201)
                         {
                             string id = null;
@@ -365,7 +365,7 @@ namespace IDPSsoAgent.Auth
                     using (var sr = new StreamReader(rs, Encoding.UTF8))
                     {
                         var json = sr.ReadToEnd();
-                        var obj = _json.Deserialize<object>(json); // { active: true/false, ... }
+                        var obj = _json.Deserialize<object>(json);
                         return ApiResult<object>.Ok(obj);
                     }
                 }
