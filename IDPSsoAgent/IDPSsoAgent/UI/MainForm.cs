@@ -15,6 +15,15 @@ namespace IDPSsoAgent.UI
         private NotifyIcon _tray;
         private ContextMenu _menu;
         private HttpServer _server;
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var cp = base.CreateParams;
+                cp.ExStyle |= 0x80; // WS_EX_NOACTIVATE
+                return cp;
+            }
+        }
 
         public MainForm()
         {

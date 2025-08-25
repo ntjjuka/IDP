@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 
 namespace IDPSsoAgent.Auth
@@ -19,6 +20,14 @@ namespace IDPSsoAgent.Auth
         private string UserInfoEndpoint() => Base() + RealmPath() + "/userinfo";
         private string LogoutEndpoint() => Base() + RealmPath() + "/logout";
         private string IntrospectEndpoint() => Base() + RealmPath() + "/token/introspect";
+        private string revokeEndpoint() => Base() + RealmPath() + "/revoke";
+
+
+        public sealed class CreatedUser
+        {
+            public string Id { get; set; }
+            public string Username { get; set; }
+        }
 
         public class TokenResponse
         {
@@ -32,6 +41,34 @@ namespace IDPSsoAgent.Auth
             public string error_description { get; set; }
         }
 
+        public Task RevokeTokensSafeAsync(string refreshToken)
+        {
+            if (string.IsNullOrEmpty(refreshToken)) return Task.CompletedTask;
+
+            return Task.Run(() =>
+            {
+                try
+                {
+                    var req = (HttpWebRequest)WebRequest.Create(revokeEndpoint());
+                    req.Method = "POST";
+                    req.ContentType = "application/x-www-form-urlencoded";
+                    req.UserAgent = "IDPSsoAgent/1.0";
+                    req.KeepAlive = true;
+                    req.Timeout = 5000;
+
+                    var form = "token_type_hint=refresh_token" +
+                               "&token=" + Uri.EscapeDataString(refreshToken) +
+                               "&client_id=" + Uri.EscapeDataString(AppConfig.ClientId) +
+                               (string.IsNullOrEmpty(AppConfig.ClientSecret) ? "" :
+                                "&client_secret=" + Uri.EscapeDataString(AppConfig.ClientSecret));
+
+                    var bytes = Encoding.UTF8.GetBytes(form);
+                    using (var os = req.GetRequestStream()) os.Write(bytes, 0, bytes.Length);
+                    using (var resp = (HttpWebResponse)req.GetResponse()) { /* 200 expected */ }
+                }
+                catch { /* best effort */ }
+            });
+        }
         private ApiResult<TokenResponse> ParseTokenResponse(string json)
         {
             var obj = _json.Deserialize<TokenResponse>(json);

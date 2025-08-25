@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\work\\IDP_new\\IDPServiceManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|d:\\work\\idp_new\\idpservicemanager\\s1 bms idpservicemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|d:\\work\\idp_new\\idpservicemanager\\s1 bms idpservicemanager\\idp-args.ini||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|D:\\work\\IDP_new\\IDPServiceManager\\s1 bms idpservicemanager\\idp-args.ini||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\idp-args.ini||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|D:\\work\\IDP_new\\IDPServiceManager\\s1 bms idpservicemanager\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|D:\\work\\IDP_new\\IDPServiceManager\\s1 bms idpservicemanager\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|D:\\work\\IDP_new\\IDPServiceManager\\s1 bms idpservicemanager\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|d:\\work\\idp_new\\idpservicemanager\\s1 bms idpservicemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|d:\\work\\idp_new\\idpservicemanager\\s1 bms idpservicemanager\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|D:\\work\\IDP_new\\IDPServiceManager\\s1 bms idpservicemanager\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{745941EB-89BC-4B81-AA63-7B6BEA702C50}|S1 BMS IDPServiceManager\\S1 BMS IDPServiceManager.csproj|solutionrelative:s1 bms idpservicemanager\\.env||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +34,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\Logger.cs",
+              "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\Logger.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\Logger.cs",
+              "RelativeToolTip": "S1 BMS IDPServiceManager\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-22T04:10:31.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\Program.cs",
               "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\Program.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\Program.cs",
               "RelativeToolTip": "S1 BMS IDPServiceManager\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwBYAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAwwBYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-28T04:16:08.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": ".env",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\.env",
               "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\.env",
@@ -59,39 +80,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "idp-args.ini",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\idp-args.ini",
               "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\idp-args.ini",
               "ToolTip": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\idp-args.ini",
               "RelativeToolTip": "S1 BMS IDPServiceManager\\idp-args.ini",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002768|",
               "WhenOpened": "2025-07-21T10:42:59.395Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MyService.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\MyService.cs",
               "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\MyService.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\MyService.cs",
               "RelativeToolTip": "S1 BMS IDPServiceManager\\MyService.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAgwEgAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAnwIkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:34:38.596Z"
+              "WhenOpened": "2025-07-21T08:34:38.596Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MyService.cs [\uB514\uC790\uC778]",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\MyService.cs",
               "RelativeDocumentMoniker": "S1 BMS IDPServiceManager\\MyService.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPServiceManager\\S1 BMS IDPServiceManager\\MyService.cs [\uB514\uC790\uC778]",
               "RelativeToolTip": "S1 BMS IDPServiceManager\\MyService.cs [\uB514\uC790\uC778]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T08:34:36.354Z"
+              "WhenOpened": "2025-07-21T08:34:36.354Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
             }
           ]
         }

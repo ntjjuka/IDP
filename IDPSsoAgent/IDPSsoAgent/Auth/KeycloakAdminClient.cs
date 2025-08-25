@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web.Script.Serialization;
+using static IDPSsoAgent.Auth.KeycloakClient;
 
 namespace IDPSsoAgent.Auth
 {
@@ -16,59 +18,144 @@ namespace IDPSsoAgent.Auth
         private string Base() => AppConfig.KeycloakBase.TrimEnd('/');
         private string RealmAdmin() => Base() + "/admin/realms/" + AppConfig.Realm;
 
-
-        // ---- 6) 회원가입 ----
-        public System.Threading.Tasks.Task<ApiResult<object>> CreateUserAsync(RegisterRequest req)
+        public Task<ApiResult<bool>> LogoutAllSessionsByUsernameAsync(string username)
         {
-            return System.Threading.Tasks.Task.Run(() =>
+            return Task.Run(() =>
             {
-                if (req == null || string.IsNullOrEmpty(req.username) || string.IsNullOrEmpty(req.password))
-                    return ApiResult<object>.Fail("username/password required");
-
-                var url = RealmAdmin() + "/users";
-                var payload = new
-                {
-                    username = req.username,
-                    email = req.email,
-                    firstName = req.firstName,
-                    lastName = req.lastName,
-                    enabled = true,
-                    emailVerified = false,
-                    credentials = new[] { new { type = "password", value = req.password, temporary = false } }
-                };
-                var json = _json.Serialize(payload);
-                var bytes = Encoding.UTF8.GetBytes(json);
-
-                var reqW = (HttpWebRequest)WebRequest.Create(url);
-                reqW.Method = "POST";
-                reqW.ContentType = "application/json";
-                reqW.UserAgent = "IDPSsoAgent/1.0";
-                // Admin client auth: Basic 대신 폼 인증이 일반적이지만, Admin REST는 Bearer가 아니라도 client 관리 권한으로 허용됨이 불안정할 수 있어
-                // 안전하게 Bearer 없이 시도하지 않고, client credentials로 admin token 가져와도 됨. 단순화를 위해 Keycloak 26 기준 client auth 허용.
-                // 필요 시: admin access token을 발급받아 Authorization: Bearer 붙이는 흐름으로 변경 가능.
-
-                // 여기서는 client credentials로 토큰 한 번 받아 Bearer 붙이는 버전:
-                string adminToken = GetAdminAccessToken();
-                reqW.Headers["Authorization"] = "Bearer " + adminToken;
-
-                using (var os = reqW.GetRequestStream()) { os.Write(bytes, 0, bytes.Length); }
-
                 try
                 {
-                    using (var resp = (HttpWebResponse)reqW.GetResponse())
+                    // 1) username → userId 조회
+                    var urlSearch = RealmAdmin() + "/users?username=" + Uri.EscapeDataString(username);
+                    var reqS = (HttpWebRequest)WebRequest.Create(urlSearch);
+                    reqS.Method = "GET";
+                    reqS.ContentType = "application/json";
+                    reqS.UserAgent = "IDPSsoAgent/1.0";
+                    reqS.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                    string userId = null;
+                    using (var resp = (HttpWebResponse)reqS.GetResponse())
+                    using (var sr = new StreamReader(resp.GetResponseStream()))
                     {
-                        // 201 Created 기대, Location 헤더 포함
-                        return ApiResult<object>.Ok(new { created = true, location = resp.Headers["Location"] });
+                        var json = sr.ReadToEnd();
+                        var users = _json.Deserialize<List<Dictionary<string, object>>>(json);
+                        if (users == null || users.Count == 0)
+                            return ApiResult<bool>.Fail("user_not_found");
+                        userId = users[0]["id"].ToString();
+                    }
+
+                    // 2) 모든 세션 종료: POST /users/{id}/logout
+                    var url = RealmAdmin() + "/users/" + userId + "/logout";
+                    var req = (HttpWebRequest)WebRequest.Create(url);
+                    req.Method = "POST";
+                    req.ContentType = "application/json";
+                    req.UserAgent = "IDPSsoAgent/1.0";
+                    req.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                    using (var resp = (HttpWebResponse)req.GetResponse())
+                    {
+                        // 일반적으로 204 No Content
+                        if ((int)resp.StatusCode == 204 || (int)resp.StatusCode == 200)
+                            return ApiResult<bool>.Ok(true);
+                        return ApiResult<bool>.Fail("logout_failed: " + resp.StatusCode);
                     }
                 }
                 catch (WebException wex)
                 {
-                    var code = (wex.Response as HttpWebResponse)?.StatusCode ?? 0;
-                    string respText = null;
-                    try { using (var rs = wex.Response?.GetResponseStream()) using (var sr = new StreamReader(rs, Encoding.UTF8)) respText = sr.ReadToEnd(); } catch { }
-                    if (code == HttpStatusCode.Conflict)
-                        return ApiResult<object>.Fail("conflict: username or email exists");
-                    return ApiResult<object>.Fail("create_user_failed: " + (respText ?? wex.Message));
+                    var code = (wex.Response as HttpWebResponse) != null
+                        ? ((HttpWebResponse)wex.Response).StatusCode.ToString()
+                        : "no_response";
+                    return ApiResult<bool>.Fail("logout_failed: " + code);
+                }
+                catch (Exception ex)
+                {
+                    return ApiResult<bool>.Fail("exception: " + ex.Message);
+                }
+            });
+        }
+
+        // ---- 6) 회원가입 ----
+        public Task<ApiResult<CreatedUser>> CreateUserAsync(string username, string password)
+        {
+            return Task.Run(() =>
+            {
+                try
+                {
+                    var url = RealmAdmin() + "/users";
+                    var body = new
+                    {
+                        username = username,
+                        enabled = true,
+                        credentials = new[] {
+                    new { type = "password", value = password, temporary = false }
+                }
+                    };
+                    var json = _json.Serialize(body);
+                    var bytes = Encoding.UTF8.GetBytes(json);
+
+                    var req = (HttpWebRequest)WebRequest.Create(url);
+                    req.Method = "POST";
+                    req.ContentType = "application/json";
+                    req.UserAgent = "IDPSsoAgent/1.0";
+                    req.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                    using (var os = req.GetRequestStream())
+                    {
+                        os.Write(bytes, 0, bytes.Length);
+                    }
+
+                    using (var resp = (HttpWebResponse)req.GetResponse())
+                    {
+                        // Keycloak 보통: 201 Created + Location: .../users/{id}
+                        if ((int)resp.StatusCode == 201)
+                        {
+                            string id = null;
+                            var loc = resp.Headers["Location"];
+                            if (!string.IsNullOrEmpty(loc))
+                            {
+                                var idx = loc.LastIndexOf('/');
+                                if (idx >= 0 && idx + 1 < loc.Length)
+                                    id = loc.Substring(idx + 1);
+                            }
+
+                            // 혹시 Location 미제공 시: username 검색으로 보강
+                            if (string.IsNullOrEmpty(id))
+                            {
+                                var search = RealmAdmin() + "/users?username=" + Uri.EscapeDataString(username);
+                                var reqS = (HttpWebRequest)WebRequest.Create(search);
+                                reqS.Method = "GET";
+                                reqS.ContentType = "application/json";
+                                reqS.UserAgent = "IDPSsoAgent/1.0";
+                                reqS.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                                using (var respS = (HttpWebResponse)reqS.GetResponse())
+                                using (var sr = new StreamReader(respS.GetResponseStream()))
+                                {
+                                    var txt = sr.ReadToEnd();
+                                    var arr = _json.Deserialize<List<Dictionary<string, object>>>(txt);
+                                    if (arr != null && arr.Count > 0 && arr[0].ContainsKey("id") && arr[0]["id"] != null)
+                                        id = arr[0]["id"].ToString();
+                                }
+                            }
+
+                            return ApiResult<CreatedUser>.Ok(new CreatedUser { Id = id, Username = username });
+                        }
+
+                        if ((int)resp.StatusCode == 409)
+                            return ApiResult<CreatedUser>.Fail("username_exists");
+
+                        return ApiResult<CreatedUser>.Fail("register_failed: " + resp.StatusCode);
+                    }
+                }
+                catch (WebException wex)
+                {
+                    var code = (wex.Response as HttpWebResponse) != null
+                        ? ((HttpWebResponse)wex.Response).StatusCode.ToString()
+                        : "no_response";
+                    return ApiResult<CreatedUser>.Fail("register_failed: " + code);
+                }
+                catch (Exception ex)
+                {
+                    return ApiResult<CreatedUser>.Fail("exception: " + ex.Message);
                 }
             });
         }
@@ -192,6 +279,63 @@ namespace IDPSsoAgent.Auth
             });
         }
 
+        public Task<ApiResult<object>> AdminChangePasswordAsync(string username, string newPassword)
+        {
+            return Task.Run(() =>
+            {
+                try
+                {
+                    // 1) username 으로 사용자 검색
+                    var urlSearch = RealmAdmin() + $"/users?username={Uri.EscapeDataString(username)}";
+                    var reqS = (HttpWebRequest)WebRequest.Create(urlSearch);
+                    reqS.Method = "GET";
+                    reqS.ContentType = "application/json";
+                    reqS.UserAgent = "IDPSsoAgent/1.0";
+                    reqS.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                    string userId;
+                    using (var resp = (HttpWebResponse)reqS.GetResponse())
+                    using (var sr = new StreamReader(resp.GetResponseStream()))
+                    {
+                        var json = sr.ReadToEnd();
+                        var users = _json.Deserialize<List<Dictionary<string, object>>>(json);
+                        if (users == null || users.Count == 0)
+                            return ApiResult<object>.Fail("user_not_found");
+
+                        userId = users[0]["id"].ToString();
+                    }
+
+                    // 2) 비밀번호 변경 요청
+                    var url = RealmAdmin() + $"/users/{userId}/reset-password";
+                    var payload = new { type = "password", value = newPassword, temporary = false };
+                    var jsonBody = _json.Serialize(payload);
+                    var bytes = Encoding.UTF8.GetBytes(jsonBody);
+
+                    var reqW = (HttpWebRequest)WebRequest.Create(url);
+                    reqW.Method = "PUT";
+                    reqW.ContentType = "application/json";
+                    reqW.UserAgent = "IDPSsoAgent/1.0";
+                    reqW.Headers["Authorization"] = "Bearer " + GetAdminAccessToken();
+
+                    using (var os = reqW.GetRequestStream()) { os.Write(bytes, 0, bytes.Length); }
+                    using (var resp = (HttpWebResponse)reqW.GetResponse())
+                    {
+                        if ((int)resp.StatusCode == 204 || (int)resp.StatusCode == 200)
+                            return ApiResult<object>.Ok(new { changed = true });
+
+                        return ApiResult<object>.Fail("change_failed: " + resp.StatusCode);
+                    }
+                }
+                catch (WebException wex)
+                {
+                    return ApiResult<object>.Fail("change_failed: " + (wex.Response as HttpWebResponse)?.StatusCode);
+                }
+                catch (Exception ex)
+                {
+                    return ApiResult<object>.Fail("exception: " + ex.Message);
+                }
+            });
+        }
 
         // ---- 9) Introspect (admin client로 인증) ----
         public System.Threading.Tasks.Task<ApiResult<object>> IntrospectAsync(string token)
@@ -262,6 +406,8 @@ namespace IDPSsoAgent.Auth
                 return obj.access_token;
             }
         }
+
+       
 
         private class TokenResponse
         {

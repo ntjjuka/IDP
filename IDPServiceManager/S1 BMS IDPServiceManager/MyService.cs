@@ -5,6 +5,7 @@ using System.Linq;
 using System.ServiceProcess;
 using System.Text.RegularExpressions;
 using System.Threading;
+using System.Runtime.CompilerServices;
 
 namespace S1_BMS_IDPServiceManager
 {
@@ -14,9 +15,13 @@ namespace S1_BMS_IDPServiceManager
         private volatile bool _isStopping;
         private string _httpPort;
 
+        // ---- LogControl 추가 ----
+        private readonly LogControl _logger = new LogControl();
+        private const string DriverName = "IDPManager";
+
         public MyService()
         {
-            this.ServiceName = "KeycloakService";
+            this.ServiceName = "IDPManager";
         }
 
         protected override void OnStart(string[] args)
@@ -135,7 +140,6 @@ namespace S1_BMS_IDPServiceManager
         private void RunJavaProcessAndWait(string javaExe, string jarPath, string javaOpts, string arguments)
         {
             var psi = new ProcessStartInfo
-
             {
                 FileName = javaExe,
                 Arguments = $"{javaOpts} -cp \"{jarPath}\" io.quarkus.bootstrap.runner.QuarkusEntryPoint {arguments}",
@@ -222,7 +226,8 @@ namespace S1_BMS_IDPServiceManager
             Log("서비스가 완전히 종료되었습니다.");
         }
 
-        private static void KillProcessOnPort(string port)
+        // ---- 인스턴스 메서드로 변경 (로그 사용) ----
+        private void KillProcessOnPort(string port)
         {
             try
             {
@@ -238,13 +243,14 @@ namespace S1_BMS_IDPServiceManager
                 using (var proc = Process.Start(procStart))
                 {
                     var output = proc?.StandardOutput.ReadToEnd();
-                    var lines = output.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                    var lines = output?.Split(new[] { Environment.NewLine }, StringSplitOptions.None)
+                               ?? Array.Empty<string>();
 
-                    foreach (var line in lines ?? Array.Empty<string>())
+                    foreach (var line in lines)
                     {
                         if (line.Contains($":{port}"))
                         {
-                            var parts = Regex.Split(line, @"\\s+");
+                            var parts = Regex.Split(line, @"\s+");
                             if (parts.Length >= 5 && int.TryParse(parts[4], out int pid))
                             {
                                 Log($"포트 {port} 점유 중인 프로세스 종료: PID={pid}");
@@ -260,41 +266,26 @@ namespace S1_BMS_IDPServiceManager
             }
         }
 
-        private static string ExtractHttpPort(string[] args)
+        private string ExtractHttpPort(string[] args)
         {
             foreach (var arg in args)
             {
                 if (arg.StartsWith("--http-port="))
                 {
-                    var match = Regex.Match(arg, @"--http-port=(\\d+)");
+                    var match = Regex.Match(arg, @"--http-port=(\d+)");
                     return match.Success ? match.Groups[1].Value : "";
                 }
             }
             return "";
         }
 
-        private static void Log(string message)
+        // ---- LogControl을 통한 공통 로그 출력 ----
+        private void Log(string message, [CallerMemberName] string caller = null)
         {
-            try
-            {
-                string logDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "logs");
-                if (!Directory.Exists(logDir))
-                {
-                    Directory.CreateDirectory(logDir);
-                }
-
-                string date = DateTime.Now.ToString("yyyy-MM-dd");
-                string logFilePath = Path.Combine(logDir, $"idp-worker-{date}.log");
-
-                string log = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {message}";
-                Console.WriteLine(log);
-
-                File.AppendAllText(logFilePath, log + Environment.NewLine);
-            }
-            catch
-            {
-                // 로그 작성 실패는 무시
-            }
+            // 콘솔 출력(디버그 시 확인용)
+            _logger.ConsoleLogWrite($"[{caller}] {message}");
+            // 파일 로그: Log/yyyyMM/dd/KeycloakService.log
+            _logger.LogWrite(DriverName, caller ?? "-", message);
         }
     }
 }

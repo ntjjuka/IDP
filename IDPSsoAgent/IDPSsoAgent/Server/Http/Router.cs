@@ -27,7 +27,7 @@ namespace IDPSsoAgent.Server.Http
                 await json(ctx, ApiResult<object>.Ok(new StatusView
                 {
                     listening = true,
-                    logged_in = TokenMemoryStore.IsLoggedIn,
+                    loggedIn = TokenMemoryStore.IsLoggedIn,
                     port = AppConfig.ListenPort
                 }));
                 return;
@@ -68,6 +68,13 @@ namespace IDPSsoAgent.Server.Http
             {
                 var dto = await Read<PasswordChangeRequest>(ctx);
                 var res = await _api.ChangePasswordAsync(dto);
+                await json(ctx, res);
+                return;
+            }
+            else if (method == "POST" && path == "/password/admin-change")
+            {
+                var dto = await Read<PasswordAdminChangeRequest>(ctx);
+                var res = await _api.AdminChangePasswordAsync(dto);
                 await json(ctx, res);
                 return;
             }

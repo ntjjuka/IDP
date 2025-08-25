@@ -1,4 +1,5 @@
 ﻿using IDPSsoAgent.Config;
+using IDPSsoAgent.Core;
 using IDPSsoAgent.Infra;
 using IDPSsoAgent.UI;
 using System;
@@ -131,7 +132,9 @@ namespace IDPSsoAgent.Startup
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.ApplicationExit += (s, e) => { SingleInstance.Release(); };
+                SessionPoller.Start();
                 Application.Run(new MainForm());
+                SessionPoller.Stop();
             }
             catch (Exception ex)
             {

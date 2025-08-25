@@ -41,6 +41,12 @@ namespace IDPSsoAgent.Core
         public string newPassword { get; set; }
     }
 
+    public class PasswordAdminChangeRequest
+    {
+        public string username { get; set; }
+        public string newPassword { get; set; }
+    }
+
     public class UsernameCheckRequest
     {
         public string username { get; set; }
@@ -57,7 +63,7 @@ namespace IDPSsoAgent.Core
     public class StatusView
     {
         public bool listening { get; set; }
-        public bool logged_in { get; set; }
+        public bool loggedIn { get; set; }
         public int port { get; set; }
     }
 }

@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Core\ApiHandlers.cs" />
     <Compile Include="Config\AppConfig.cs" />
+    <Compile Include="Core\SessionPoller.cs" />
     <Compile Include="Startup\AutoStart.cs" />
     <Compile Include="Server\Sse\EventBus.cs" />
     <Compile Include="Server\Http\HttpServer.cs" />

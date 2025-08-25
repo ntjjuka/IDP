@@ -110,7 +110,7 @@ namespace IDPSsoAgent.Server.Http
             return new StatusView
             {
                 listening = _listener.IsListening,
-                logged_in = TokenMemoryStore.IsLoggedIn,
+                loggedIn = TokenMemoryStore.IsLoggedIn,
                 port = AppConfig.ListenPort
             };
         }
