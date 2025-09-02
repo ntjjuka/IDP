@@ -59,7 +59,9 @@ namespace IDPSsoAgentV2
                 AgentLog("UnobservedTaskException: " + e.Exception);
                 e.SetObserved();
             };
-            // 0) 유지보수 모드 (뮤텍스 X)
+
+            // ===== 커맨드라인 옵션 =====
+            // --setup-https [port]: HTTPS 설정 수행(관리자 권한 필요)
             if (args.Length >= 1 && args[0].Equals("--setup-https", StringComparison.OrdinalIgnoreCase))
             {
                 int port = (args.Length >= 2 && int.TryParse(args[1], out var p)) ? p : PORT;
@@ -78,6 +80,7 @@ namespace IDPSsoAgentV2
                 }
                 return;
             }
+            // --reset-https [port]: HTTPS 설정 제거(관리자 권한 필요)
             if (args.Length >= 1 && args[0].Equals("--reset-https", StringComparison.OrdinalIgnoreCase))
             {
                 int port = (args.Length >= 2 && int.TryParse(args[1], out var p)) ? p : PORT;
@@ -92,6 +95,18 @@ namespace IDPSsoAgentV2
                     SafeLog("reset failed(top): " + ex);
                     Environment.Exit(1);
                 }
+                return;
+            }
+
+            //재시작 설치 및 제거
+            if (args.Length >= 1 && args[0].Equals("--install-autostart", StringComparison.OrdinalIgnoreCase))
+            {
+                AutoStart.EnableForCurrentUser();
+                return;
+            }
+            if (args.Length >= 1 && args[0].Equals("--uninstall-autostart", StringComparison.OrdinalIgnoreCase))
+            {
+                AutoStart.DisableForCurrentUser();
                 return;
             }
 
@@ -157,6 +172,7 @@ namespace IDPSsoAgentV2
                             Environment.Exit(1);
                             return;
                         }
+                        AutoStart.EnableForCurrentUser();
                     }
                     catch (System.ComponentModel.Win32Exception wex)
                     {
@@ -189,6 +205,7 @@ namespace IDPSsoAgentV2
                             Environment.Exit(1);
                             return;
                         }
+                        AutoStart.EnableForCurrentUser();
                     }
                     catch (Exception ex)
                     {

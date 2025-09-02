@@ -49,9 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpServer.cs" />
-    <Compile Include="HttpsSetup.cs" />
-    <Compile Include="NetshHelper.cs" />
+    <Compile Include="Server\Http\HttpServer.cs" />
+    <Compile Include="Startup\AutoStart.cs" />
+    <Compile Include="Startup\HttpsSetup.cs" />
+    <Compile Include="Startup\NetshHelper.cs" />
     <Compile Include="TrayForm.cs">
       <SubType>Form</SubType>
     </Compile>
