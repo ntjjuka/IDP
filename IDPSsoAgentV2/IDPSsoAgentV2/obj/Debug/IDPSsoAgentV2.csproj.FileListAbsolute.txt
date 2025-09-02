@@ -1,0 +1,12 @@
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.Properties.Resources.resources
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.csproj.GenerateResource.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\Debug\IDPSsoAgentV2.exe.config
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\Debug\IDPSsoAgentV2.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\Debug\IDPSsoAgentV2.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAgentV2.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\Debug\BouncyCastle.Cryptography.dll
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\Debug\BouncyCastle.Cryptography.xml
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\Debug\IDPSsoAg.A91C8628.Up2Date
