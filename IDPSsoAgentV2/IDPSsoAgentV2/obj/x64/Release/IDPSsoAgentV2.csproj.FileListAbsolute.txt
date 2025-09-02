@@ -1,0 +1,13 @@
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDPSsoAgentV2.exe.config
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDPSsoAgentV2.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDPSsoAgentV2.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\BouncyCastle.Cryptography.xml
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.Properties.Resources.resources
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.csproj.GenerateResource.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.csproj.Fody.CopyLocal.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.csproj.Fody.RuntimeCopyLocal.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAg.A91C8628.Up2Date
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDPSsoAgentV2.pdb

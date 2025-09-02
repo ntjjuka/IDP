@@ -1,0 +1,6 @@
+# aespb 암호화 명령문
+.\ConfigTool.exe enc aespb "change-me-very-secret"
+
+
+#PC 전용 암호화 (dpapi)
+.\ConfigTool.exe enc dpapi "change-me-very-secret" --scope machine

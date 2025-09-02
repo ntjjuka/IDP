@@ -3,11 +3,26 @@
   "WorkspaceRootPath": "D:\\work\\IDP_new\\IDPSsoAgentV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\trayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\trayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\config\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\config\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\server\\http\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\auth\\keycloakadminclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\auth\\keycloakadminclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\core\\sessionpoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\core\\sessionpoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|IDPSsoAgentV2||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\fodyweavers.xml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\fodyweavers.xml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\server\\http\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\server\\http\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,47 +30,39 @@
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\server\\http\\httpserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\server\\sse\\sseclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\trayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\trayform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\server\\sse\\sseclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\server\\sse\\sseclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\server\\sse\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\server\\sse\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\server\\sse\\eventbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\infra\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\infra\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\infra\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\core\\tokenmemorystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\core\\tokenmemorystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\core\\tokenmemorystore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\core\\sessionpoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\core\\sessionpoller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\core\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\core\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\core\\models.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\core\\apihandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\core\\apihandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\core\\apihandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\config\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\config\\appconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\auth\\keycloakadminclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\auth\\keycloakadminclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\auth\\keycloakclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\auth\\keycloakclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\auth\\keycloakclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|d:\\work\\idp_new\\idpssoagentv2\\idpssoagentv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|D:\\work\\IDP_new\\IDPSsoAgentV2\\idpssoagentv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E072848-AE2A-4AAE-8A21-F673D80A7F39}|IDPSsoAgentV2\\IDPSsoAgentV2.csproj|solutionrelative:idpssoagentv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -78,63 +85,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TrayForm.cs",
-              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\TrayForm.cs",
-              "RelativeDocumentMoniker": "IDPSsoAgentV2\\TrayForm.cs",
-              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\TrayForm.cs",
-              "RelativeToolTip": "IDPSsoAgentV2\\TrayForm.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
+              "Title": "AppConfig.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\config\\AppConfig.cs",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\config\\AppConfig.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\config\\AppConfig.cs",
+              "RelativeToolTip": "IDPSsoAgentV2\\config\\AppConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACEAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:25:44.214Z",
+              "WhenOpened": "2025-09-02T02:24:27.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Logger.cs",
-              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\infra\\Logger.cs",
-              "RelativeDocumentMoniker": "IDPSsoAgentV2\\infra\\Logger.cs",
-              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\infra\\Logger.cs",
-              "RelativeToolTip": "IDPSsoAgentV2\\infra\\Logger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:50.579Z",
-              "EditorCaption": ""
+              "DocumentIndex": 3,
+              "Title": "IDPSsoAgentV2",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\IDPSsoAgentV2.csproj",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\IDPSsoAgentV2.csproj",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\IDPSsoAgentV2.csproj",
+              "RelativeToolTip": "IDPSsoAgentV2\\IDPSsoAgentV2.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-02T03:36:36.861Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TokenMemoryStore.cs",
-              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
-              "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
-              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
-              "RelativeToolTip": "IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:37.234Z",
-              "EditorCaption": ""
+              "DocumentIndex": 4,
+              "Title": "FodyWeavers.xml",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\FodyWeavers.xml",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\FodyWeavers.xml",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\FodyWeavers.xml",
+              "RelativeToolTip": "IDPSsoAgentV2\\FodyWeavers.xml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
+              "WhenOpened": "2025-09-02T03:36:18.115Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SessionPoller.cs",
-              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\SessionPoller.cs",
-              "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\SessionPoller.cs",
-              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\SessionPoller.cs",
-              "RelativeToolTip": "IDPSsoAgentV2\\core\\SessionPoller.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:36.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Models.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\Models.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\Models.cs",
@@ -142,12 +137,11 @@
               "RelativeToolTip": "IDPSsoAgentV2\\core\\Models.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:34.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T02:24:34.878Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "ApiHandlers.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\ApiHandlers.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\ApiHandlers.cs",
@@ -155,25 +149,11 @@
               "RelativeToolTip": "IDPSsoAgentV2\\core\\ApiHandlers.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:30.795Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T02:24:30.795Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppConfig.cs",
-              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\config\\AppConfig.cs",
-              "RelativeDocumentMoniker": "IDPSsoAgentV2\\config\\AppConfig.cs",
-              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\config\\AppConfig.cs",
-              "RelativeToolTip": "IDPSsoAgentV2\\config\\AppConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:27.198Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "KeycloakClient.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\auth\\KeycloakClient.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\auth\\KeycloakClient.cs",
@@ -181,25 +161,24 @@
               "RelativeToolTip": "IDPSsoAgentV2\\auth\\KeycloakClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:24:22.611Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T02:24:22.611Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "KeycloakAdminClient.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\auth\\KeycloakAdminClient.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\auth\\KeycloakAdminClient.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\auth\\KeycloakAdminClient.cs",
               "RelativeToolTip": "IDPSsoAgentV2\\auth\\KeycloakAdminClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAGwBAAAAAAAAAAAMwIQBAABgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-02T02:23:54.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "SseClient.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\sse\\SseClient.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Server\\sse\\SseClient.cs",
@@ -207,12 +186,11 @@
               "RelativeToolTip": "IDPSsoAgentV2\\Server\\sse\\SseClient.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:23:35.85Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T02:23:35.85Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "EventBus.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\sse\\EventBus.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Server\\sse\\EventBus.cs",
@@ -220,54 +198,95 @@
               "RelativeToolTip": "IDPSsoAgentV2\\Server\\sse\\EventBus.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:23:33.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-02T02:23:33.341Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Router.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\Http\\Router.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Server\\Http\\Router.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\Http\\Router.cs",
               "RelativeToolTip": "IDPSsoAgentV2\\Server\\Http\\Router.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAkwDgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-02T02:23:25.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+              "WhenOpened": "2025-09-02T02:23:25.391Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SessionPoller.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\SessionPoller.cs",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\SessionPoller.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\SessionPoller.cs",
+              "RelativeToolTip": "IDPSsoAgentV2\\core\\SessionPoller.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAAAIwAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:24:36.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TokenMemoryStore.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
+              "RelativeToolTip": "IDPSsoAgentV2\\core\\TokenMemoryStore.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:24:37.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\infra\\Logger.cs",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\infra\\Logger.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\infra\\Logger.cs",
+              "RelativeToolTip": "IDPSsoAgentV2\\infra\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:24:50.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TrayForm.cs",
+              "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\TrayForm.cs",
+              "RelativeDocumentMoniker": "IDPSsoAgentV2\\TrayForm.cs",
+              "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\TrayForm.cs",
+              "RelativeToolTip": "IDPSsoAgentV2\\TrayForm.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-02T02:25:44.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HttpServer.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\Http\\HttpServer.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Server\\Http\\HttpServer.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Server\\Http\\HttpServer.cs",
               "RelativeToolTip": "IDPSsoAgentV2\\Server\\Http\\HttpServer.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAB8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAGQAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T06:29:25.221Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T06:29:25.221Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "NetshHelper.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\NetshHelper.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\NetshHelper.cs",
               "ToolTip": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\NetshHelper.cs",
               "RelativeToolTip": "IDPSsoAgentV2\\NetshHelper.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-01T06:30:53.044Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "AutoStart.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Startup\\AutoStart.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Startup\\AutoStart.cs",
@@ -279,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "HttpsSetup.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Startup\\HttpsSetup.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Startup\\HttpsSetup.cs",
@@ -291,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\work\\IDP_new\\IDPSsoAgentV2\\IDPSsoAgentV2\\Program.cs",
               "RelativeDocumentMoniker": "IDPSsoAgentV2\\Program.cs",
@@ -299,8 +318,7 @@
               "RelativeToolTip": "IDPSsoAgentV2\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T06:28:34.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T06:28:34.427Z"
             }
           ]
         }

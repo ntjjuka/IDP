@@ -1,0 +1,7 @@
+D:\work\IDP_new\ConfigTool\ConfigTool\bin\Debug\ConfigTool.exe.config
+D:\work\IDP_new\ConfigTool\ConfigTool\bin\Debug\ConfigTool.exe
+D:\work\IDP_new\ConfigTool\ConfigTool\bin\Debug\ConfigTool.pdb
+D:\work\IDP_new\ConfigTool\ConfigTool\obj\Debug\ConfigTool.csproj.AssemblyReference.cache
+D:\work\IDP_new\ConfigTool\ConfigTool\obj\Debug\ConfigTool.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\ConfigTool\ConfigTool\obj\Debug\ConfigTool.exe
+D:\work\IDP_new\ConfigTool\ConfigTool\obj\Debug\ConfigTool.pdb
