@@ -1,0 +1,16 @@
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDTray.exe.config
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDTray.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\IDTray.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\BouncyCastle.Cryptography.xml
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.Properties.Resources.resources
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.csproj.GenerateResource.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.csproj.Up2Date
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\BouncyCastle.Cryptography.dll
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\Costura.dll
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\Costura.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Release\Costura.xml
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Release\IDTray.exe.config

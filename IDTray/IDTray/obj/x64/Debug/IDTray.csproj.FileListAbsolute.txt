@@ -1,0 +1,13 @@
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Debug\IDTray.exe.config
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Debug\IDTray.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Debug\IDTray.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\bin\x64\Debug\BouncyCastle.Cryptography.xml
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.AssemblyReference.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.Properties.Resources.resources
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.GenerateResource.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.CoreCompileInputs.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.Up2Date
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.exe
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.pdb
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.Fody.CopyLocal.cache
+D:\work\IDP_new\IDPSsoAgentV2\IDPSsoAgentV2\obj\x64\Debug\IDTray.csproj.Fody.RuntimeCopyLocal.cache
